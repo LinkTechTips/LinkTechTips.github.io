@@ -216,7 +216,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -395,13 +395,13 @@
       
         jQuery.ajax({
           type: 'GET',
-          url: 'https://v1.hitokoto.cn/?c=f&amp;encode=text',
-          headers: {},
+          url: 'https://v1.hitokoto.cn/?e=f&amp;encode=json',
+          headers: {"user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML","like Gecko) Chrome/100.0.4896.75 Safari/537.36":null},
           dataType: 'json',
           success: function(result) {
             var apiText;
             if (result) {
-              var keys = ''.split(',');
+              var keys = 'hitokoto'.split(',');
               if (result instanceof Array) {
                 result = result[0];
               }
@@ -419,7 +419,7 @@
           },
           error: function(xhr, status, error) {
             if (error) {
-              console.error('Failed to request https://v1.hitokoto.cn/?c=f&amp;encode=text:', error);
+              console.error('Failed to request https://v1.hitokoto.cn/?e=f&amp;encode=json:', error);
             }
             typing(text);
           }
