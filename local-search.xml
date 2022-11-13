@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>GitHub Actions 自动编译 FSD 联飞服务软件</title>
+    <link href="/2022/11/13/GitHub-Actions-%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91-FSD-%E8%81%94%E9%A3%9E%E6%9C%8D%E5%8A%A1%E8%BD%AF%E4%BB%B6/"/>
+    <url>/2022/11/13/GitHub-Actions-%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91-FSD-%E8%81%94%E9%A3%9E%E6%9C%8D%E5%8A%A1%E8%BD%AF%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>目前做模拟飞行的同行使用的连飞服务软件应该都是开源的 <code>FSD 3.000 draft 9</code> 版本，其同时实现了连飞、服务器管理以及服务器互联。</p><p>但是由于 FSD 是上世纪末的产物，且 Cpp 又长又臭，并且 GitHub 上开源的 <a href="https://github.com/kuroneko/fsd">FSD</a> 并没有编译版，只有源码，所以使很多不懂编程的同行很摸不着头脑，于是决定改为 GitHub Actions 自动编译。</p></blockquote><h2 id="准备工作">准备工作</h2><p>在 GitHub 中将 <a href="https://github.com/kuroneko/fsd">FSD</a> Fork 到自己的存储库中。</p><h2 id="编写-Workflow">编写 Workflow</h2><p>创建 <code>.github/workflows/cmake.yml</code>，写入如下内容，注意仓库地址和 Git 配置是否正确，此时当 <code>push</code> 到仓库时，Github Actions 将自动编译。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs YAML"><span class="hljs-attr">name:</span> <span class="hljs-string">CMake</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span> [ <span class="hljs-string">master</span> ]<br>  <span class="hljs-attr">pull_request:</span><br>    <span class="hljs-attr">branches:</span> [ <span class="hljs-string">master</span> ]<br><br><span class="hljs-attr">env:</span><br>  <span class="hljs-comment"># Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)</span><br>  <span class="hljs-attr">BUILD_TYPE:</span> <span class="hljs-string">Release</span><br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-comment"># The CMake configure and build commands are platform agnostic and should work equally</span><br>    <span class="hljs-comment"># well on Windows or Mac.  You can convert this to a matrix build if you need</span><br>    <span class="hljs-comment"># cross-platform coverage.</span><br>    <span class="hljs-comment"># See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br><br>    <span class="hljs-attr">steps:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v2</span><br><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Configure</span> <span class="hljs-string">CMake</span><br>      <span class="hljs-comment"># Configure CMake in a &#x27;build&#x27; subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.</span><br>      <span class="hljs-comment"># See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type</span><br>      <span class="hljs-attr">run:</span> <span class="hljs-string">cmake</span> <span class="hljs-string">-B</span> <span class="hljs-string">$&#123;&#123;github.workspace&#125;&#125;/build</span> <span class="hljs-string">-DCMAKE_BUILD_TYPE=$&#123;&#123;env.BUILD_TYPE&#125;&#125;</span><br><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span><br>      <span class="hljs-comment"># Build your program with the given configuration</span><br>      <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br><span class="hljs-string">            cd $&#123;&#123;github.workspace&#125;&#125;/build</span><br><span class="hljs-string">            make</span><br><span class="hljs-string"></span>            <br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">MV</span><br>      <span class="hljs-attr">run:</span> <span class="hljs-string">| </span><br><span class="hljs-string">       cd $&#123;&#123;github.workspace&#125;&#125;/build</span><br><span class="hljs-string">       mv fsd $&#123;&#123;github.workspace&#125;&#125;/unix/fsd</span><br><span class="hljs-string"></span>      <br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;Upload Artifact&#x27;</span><br>      <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/upload-artifact@v2</span><br>      <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">name:</span> <span class="hljs-string">fsd</span><br>          <span class="hljs-attr">path:</span> <span class="hljs-string">$&#123;&#123;github.workspace&#125;&#125;/unix/</span><br>          <span class="hljs-attr">retention-days:</span> <span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>开发</category>
+      
+      <category>模拟飞行</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>FSD</tag>
+      
+      <tag>模拟飞行</tag>
+      
+      <tag>开发</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2022/11/12/hello-world/"/>
     <url>/2022/11/12/hello-world/</url>
