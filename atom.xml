@@ -6,7 +6,7 @@
   <link href="https://blog.linktechtips.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.linktechtips.cn/"/>
-  <updated>2022-11-13T20:05:04.076Z</updated>
+  <updated>2022-11-14T09:01:48.767Z</updated>
   <id>https://blog.linktechtips.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>雷达管制模拟机</title>
+    <link href="https://blog.linktechtips.cn/posts/52029/"/>
+    <id>https://blog.linktechtips.cn/posts/52029/</id>
+    <published>2022-11-14T08:10:33.000Z</published>
+    <updated>2022-11-14T09:01:48.767Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="模拟机设备操作">模拟机设备操作</h2><p><img src="/img/%E9%9B%B7%E8%BE%BE%E7%AE%A1%E5%88%B6%E6%A8%A1%E6%8B%9F%E6%9C%BA-1.png" alt="模拟机设备操作"><br><img src="/img/%E9%9B%B7%E8%BE%BE%E7%AE%A1%E5%88%B6%E6%A8%A1%E6%8B%9F%E6%9C%BA-2.png" alt="模拟机设备操作"><br><img src="/img/%E9%9B%B7%E8%BE%BE%E7%AE%A1%E5%88%B6%E6%A8%A1%E6%8B%9F%E6%9C%BA-3.png" alt="模拟机设备操作"></p><h2 id="雷达管制标准通话">雷达管制标准通话</h2><h3 id="通话用语基本要求">通话用语基本要求</h3><ol><li>先想后说，应在发话之前想好通话内容。</li><li>先听后说，应避免干扰他人通话。</li><li>应熟练掌握送话器使用技巧。</li><li>发话速度应保持适中，在发送须记录的信息时降低速率。</li><li>通话时每个单词发音应清楚、明白并保持通话音量平稳，使用正常语调。</li><li>在通话中的数字前应稍作停顿，重读数字应以较慢的语速发出，以便于理解。</li><li>应避免使用 “啊、哦” 等犹豫不决的词。</li><li>为保证通话内容的完整性，应在开始通话前按下发送开关，待发话完毕后再将其松开。</li></ol><h3 id="通话结构">通话结构</h3><ol><li>首次联系时应采用的通话结构为：对方呼号+己方呼号+通话内容。</li><li>首次通话以后的各次通话，管制员宜采用下列通话结构：对方呼号+通话内容。</li><li>航空器驾驶员宜采用的通话结构为：对方呼号+己方呼号+通话内容。</li><li>管制员肯定航空器驾驶员复诵的内容时可仅呼对方呼号。当管制员认为有必要时，可具体肯定。</li></ol><h3 id="雷达管制标准通话-2">雷达管制标准通话</h3><p><img src="/img/%E9%9B%B7%E8%BE%BE%E7%AE%A1%E5%88%B6%E6%A8%A1%E6%8B%9F%E6%9C%BA-4.png" alt="雷达管制标准通话"><br><img src="/img/%E9%9B%B7%E8%BE%BE%E7%AE%A1%E5%88%B6%E6%A8%A1%E6%8B%9F%E6%9C%BA-5.png" alt="雷达管制标准通话"></p><p>上升（下降）到+高度层+保持</p><p>Climb(Descend) And Maintain+LEVEL</p><p>保持+高度层<br>Maintain+LEVEL</p><p><img src="/img/%E9%9B%B7%E8%BE%BE%E7%AE%A1%E5%88%B6%E6%A8%A1%E6%8B%9F%E6%9C%BA-6.png" alt="雷达管制标准通话"></p><p>右转（左转）+航向+三位数+原因</p><p>Turn right(left) +heading+070+due.</p><p><img src="/img/%E9%9B%B7%E8%BE%BE%E7%AE%A1%E5%88%B6%E6%A8%A1%E6%8B%9F%E6%9C%BA-7.png" alt="雷达管制标准通话"></p><h2 id="雷达管制要求">雷达管制要求</h2><h3 id="进程单要求">进程单要求</h3><p>区域管制单位管制员应当根据雷达位置判断航空器<code>到达某一定位点的时间</code>，并至少将其在飞行进程单上记录<code>一次</code>。</p><h3 id="雷达管制要求-2">雷达管制要求</h3><p>在向航空器提供雷达管制服务前，雷达管制员应当对航空器进行<code>识别确认</code>，并保持该识别直至雷达管制服务终止，失去识别的，应当立即通知该航空器，并重新识别或者终止雷达管制服务。</p><p>雷达管制服务终止时应当通知航空器。</p><p>使用二次监视雷达时，可以通过下列一个或多个程序识别航空器：</p><ol><li>从雷达标牌上认出航空器的识别标志；</li><li>经雷达标牌确认，指定的离散二次雷达应答机编码与设定的二次雷达应答机编码一致；</li><li>在雷达标牌上，直接认出具有S模式设备航空器的识别标志；</li><li>通过雷达识别移交；</li><li>对于设定某一特殊编码的航空器，观察其遵守指令的情况；</li><li>通过使用应答机的“识别”功能。</li></ol><p>测定航空器之间的间隔应当按照如下规定：</p><ol><li>两架航空器的一次雷达标志，以两个中心的距离测算；</li><li>一架航空器的一次雷达标志和另一架航空器的二次雷达标志，以一次雷达标志的中心至二次雷达标志最近边缘的距离测算；</li><li>两架航空器的二次雷达标志，以两个标志最近边缘距离测算；如有足够的精度，亦可按两个中心的距离测算；</li><li>两架航空器的雷达位置符号，在其中心之间的距离测算；一架航空器的雷达位置符号与另一架航空器的一、二次雷达标志，以其雷达位置符号中心到一、二次雷达标志最近边缘之间距离测算；在实施雷达间隔时，雷达管制员应当考虑航空器的运行方向、速度、雷达技术性能，通信拥挤造成的干扰和雷达管制的能力。</li></ol><p>雷达管制间隔标准适用于所有被雷达识别的航空器之间，一架正在起飞并在跑道端2公里内将被识别的航空器与另一架被识别的航空器之间、等待航线上的航空器之间不得使用雷达管制间隔。</p><p>雷达水平间隔标准应当按照如下规定：</p><ol><li><code>进近</code>管制不得小于<code>6公里</code>，<code>区域</code>管制不得小于<code>10公里</code>；</li><li>在相邻管制区使用雷达间隔时，雷达管制的航空器与管制区边界线之间的间隔在未经协调前，进近管制不得小于3公里，区域管制不得小于5公里；</li><li>在相邻管制区使用非雷达间隔时，雷达管制的航空器与管制区边界线的间隔在未经协调前，进近管制不得小于6公里，区域管制不得小于10公里。</li></ol><p>具备下列条件之一时，相对飞行的两架航空器可不再保持垂直间隔：</p><ol><li>两架航空器相遇后，并已获得规定的水平间隔；</li><li>一架航空器报告与另一架航空器已经相遇过。</li></ol><p>引导航空器应当指明转弯方向，转弯角度，应当通知航空器驾驶员引导的意图。</p><p>引导终止时，指示其恢复自主领航，必要时应当通知航空器其所在的位置。引导航空器离开指定的程序时，应当发布高度限制。</p><p>航空器利用机载设备作正常仪表进近时，指示航空器在建立最后进近航道时报告，收到报告时，进近雷达服务即可终止。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;模拟机设备操作&quot;&gt;模拟机设备操作&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/img/%E9%9B%B7%E8%BE%BE%E7%AE%A1%E5%88%B6%E6%A8%A1%E6%8B%9F%E6%9C%BA-1.png&quot; alt=&quot;模拟机设备操作&quot;&gt;&lt;br&gt;
+&lt;i</summary>
+      
+    
+    
+    
+    <category term="模拟飞行" scheme="https://blog.linktechtips.cn/categories/%E6%A8%A1%E6%8B%9F%E9%A3%9E%E8%A1%8C/"/>
+    
+    <category term="管制" scheme="https://blog.linktechtips.cn/categories/%E6%A8%A1%E6%8B%9F%E9%A3%9E%E8%A1%8C/%E7%AE%A1%E5%88%B6/"/>
+    
+    
+    <category term="模拟飞行" scheme="https://blog.linktechtips.cn/tags/%E6%A8%A1%E6%8B%9F%E9%A3%9E%E8%A1%8C/"/>
+    
+    <category term="管制" scheme="https://blog.linktechtips.cn/tags/%E7%AE%A1%E5%88%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>GitHub Actions 自动编译 FSD 联飞服务软件</title>
